@@ -15,13 +15,14 @@
             var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
             
             document.getElementById("countdown").innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds";
+            document.getElementById("targetDate").innerHTML = `Countdown to ${targetDate}`;
             
             setTimeout(countdown, 1000);
         }
     </script>
 </head>
 <body onload="countdown()">
-    <h1>Countdown to August 7, 2023, 23:59 p.m.</h1>
+    <h1 id="targetDate"></h1>
     <div id="countdown"></div>
 </body>
 </html>
